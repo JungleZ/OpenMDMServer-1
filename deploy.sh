@@ -33,15 +33,15 @@ killTomcat
 
 #删除原有工程
 
-#rm -rf $TOMCAT_APP_PATH/webapps/TOOT
-#rm -rf $TOMCAT_APP_PATH/webapps/TOOT.war
-#rm -rf $TOMCAT_APP_PATH/webapps/OpenMDMServer.war
+#rm -rf $TOMCAT_APP_PATH/webapps/ROOT
+rm -rf $TOMCAT_APP_PATH/webapps/ROOT.war
+rm -rf $TOMCAT_APP_PATH/webapps/OpenMDMServer.war
 rm -rf $TOMCAT_APP_PATH/webapps/OpenMDMServer
 rm -rf $TOMCAT_APP_PATH/webapps/docs
 rm -rf $TOMCAT_APP_PATH/webapps/examples
 rm -rf $TOMCAT_APP_PATH/webapps/host-manager
 rm -rf $TOMCAT_APP_PATH/webapps/manager
-rm -rf $TOMCAT_APP_PATH/webapps/TOOT
+rm -rf $TOMCAT_APP_PATH/webapps/ROOT
 #复制新的工程
 cp -r $PROJ_PATH/OpenMDMServer/target/OpenMDMServer.war $TOMCAT_APP_PATH/webapps/
 
@@ -51,6 +51,9 @@ cd $TOMCAT_APP_PATH/webapps
 
 echo "before  $TOMCAT_APP_PATH/webapps/OpenMDMServer to $TOMCAT_APP_PATH/webapps/ROOT "
 mv OpenMDMServer.war ROOT.war
+
+rm -rf $TOMCAT_APP_PATH/webapps/OpenMDMServer.war
+
 echo "after $TOMCAT_APP_PATH/webapps/OpenMDMServer to $TOMCAT_APP_PATH/webapps/ROOT "
 
 echo "set up success"
