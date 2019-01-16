@@ -50,6 +50,8 @@ rm -rf $TOMCAT_APP_PATH/webapps/ROOT
 #复制新的工程
 cp -r $PROJ_PATH/OpenMDMServer/target/OpenMDMServer-1.0.war $TOMCAT_APP_PATH/webapps/
 
+rm -rf $PROJ_PATH/OpenMDMServer/target/OpenMDMServer-1.0.war
+
 echo "from  $PROJ_PATH/OpenMDMServer/target/OpenMDMServer-1.0.war to $TOMCAT_APP_PATH/webapps/"
 
 cd $TOMCAT_APP_PATH/webapps
